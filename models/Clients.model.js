@@ -8,7 +8,7 @@ const clientModel = new mongoose.Schema(
     email: {
       type: String,
     },
-    description: {
+    project: {
       type: String,
     },
   },
