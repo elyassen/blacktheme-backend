@@ -1,16 +1,9 @@
 const express = require("express");
 const app = express();
-const cors = require("cors");
 const clientRoute = require("./routes/clientRoute");
 const ConnectDb = require("./db");
-
-// CORS configuration
-const corsOptions = {
-  origin: "https://blacktheme.onrender.com/",
-  optionsSuccessStatus: 200,
-};
-
-app.use(cors(corsOptions)); //
+const cors = require("cors");
+app.use(cors());
 app.use(express.json());
 app.use("/client", clientRoute);
 ConnectDb();
